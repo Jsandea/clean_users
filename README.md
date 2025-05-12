@@ -1,11 +1,12 @@
 # Asistente para la limpieza de usuarios antiguos del sistema.
 
-Cometido: Este script asiste interactivamente para borrar usuarios del sistema cuya fecha de último acceso sea anterior a una dada.
+## Objetivo 
+Estos script asisten interactivamente para borrar usuarios del sistema cuya fecha de último acceso sea anterior a una dada.
 Compara el último acceso a el sistema del usuario y si es anterior a él  año indicado por la variable **"anio_ultimo_acceso"**
-va a considerar que este usuario es un candidato a ser eliminado, dándonos la opción de poder eliminarlo.
+considerar que este usuario es un candidato a ser eliminado, dándonos la opción de poder eliminarlo.
 Si decidimos eliminar el usuario, lo eliminará tanto de la base de datos ldap como su directorio del /home del servidor.
-
-* !El script no borra datos sin confirmar!
+* El script **no borra datos** sin confirmar!
+* Lo ideal es contrastar con información de los profesores / alumnos del curso actual.
 * Tenemos 2 scripts uno para profesores y otro para alumnos.
 
  ![A sample image](cleanUsers.png)
@@ -21,4 +22,7 @@ Si decidimos eliminar el usuario, lo eliminará tanto de la base de datos ldap c
 3. Ejecutar script: 
 ```bash
     python3 clean_students.py
+```
+```bash
+    python3 clean_teachers.py
 ```
